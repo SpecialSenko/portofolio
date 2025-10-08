@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 ---
 
 <section
-	class="w-screen h-screen flex justify-center items-center-safe flex-col relative overflow-hidden"
+class={`w-screen h-screen flex justify-center items-center-safe flex-col relative overflow-hidden`}
 >
 	<div id="content-skills" class="blur-md">
 		<Image
@@ -15,13 +15,13 @@ import { Image } from "astro:assets";
 			id="icon-skills"
 			width={430}
 			height={430}
-			class="rounded-xl shadow-lg max-w-xs pointer-events-auto"
+      class={"rounded-xl shadow-lg max-w-xs pointer-events-auto z-30"}
 		/>
 
 		<!-- <div id="skills" class="w-20 h-20 bg-red-500 absolute top-90 left-200">
 		</div> -->
 
-		<SkillsCollection client:visible />
+		<SkillsCollection client:only />
 	</div>
 
 	<h1
